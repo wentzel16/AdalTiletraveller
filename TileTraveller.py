@@ -6,18 +6,37 @@ x = 1
 y = 1
 
 while True:
+    print("You can travel (N)orth:")
 
-    direction = (input("input a direction: "))
+    direction = (input("Direction: "))
     
 #North
     if direction == "N":
         if (x == 1 and y == 3) or (x == 2 and y == 3) or (x==3 and y==3) or (x==2 and y==2):
             print("Not a valid direction!")
         else:
-            if y < 3:
+            if (x == 1 and y == 2):
                 y += 1
+                print("You can travel (N)orth or (S)outh or (E)ast")
                 print(x,y)
+                
+            elif (x == 1 and y == 2):
+                print("you can travel (S)outh or (E)ast or (N)orth")
+                print(x,y)
+                y += 1
                 print("You can travel: (N)orth or (E)ast or (S)outh.")
+            elif (x == 2 and y == 1 ):
+                print("You can travel (N)orth")
+                print(x,y)
+                y += 1
+            elif (x == 3 and y == 2):
+                print("You can travel (N)orth or (S)outh")
+                print(x,y)
+                y += 1
+            elif (x == 3 and y == 1):
+                print("You can travel (N)orth ")
+                print(x,y)
+                y += 1    
         
 #South
     if direction == "S":
